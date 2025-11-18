@@ -3,7 +3,7 @@ import path from 'path';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 
-const dbPath = path.join(process.cwd(), '/tmp/bookings.db');
+const dbPath = '/tmp/bookings.db';
 
 export async function GET() {
   const db = await open({ filename: dbPath, driver: sqlite3.Database });
